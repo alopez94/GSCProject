@@ -6,6 +6,16 @@ const routes: Routes = [
   {
     path: '',
     component: ContentLayoutComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('./usuarios/usuarios.module').then(m => m.UsuariosModule)
+      }
+    ]
   },
   {
     path: '**',

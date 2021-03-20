@@ -36,3 +36,14 @@
     border: none;
   }
 
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .user-button {
+    min-width: 64px;
+    max-width: 100px;
+        height: 64px;
+
+  }
+
