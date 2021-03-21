@@ -6,7 +6,21 @@ import { LoginComponent } from './auth/components/login/login.component';
 const routes: Routes = [
   {
     path: '',
+<<<<<<< HEAD
     component: LoginComponent,
+=======
+    component: ContentLayoutComponent,
+    children: [
+      {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'users',
+        loadChildren: () => import('./usuarios/usuarios.module').then(m => m.UsuariosModule)
+      }
+    ]
+>>>>>>> 5df1c474fb1ffd6612e1494301811f6f779177f7
   },
   {
     path: '**',

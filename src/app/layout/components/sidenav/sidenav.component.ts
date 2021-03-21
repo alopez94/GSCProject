@@ -12,19 +12,10 @@ export class SidenavComponent implements OnDestroy {
 
   fillerNav = [
     { route: 'dashboard', title: 'Home',  icon: 'home', class: '' },
-    { route: 'user-profile', title: 'User Profile',  icon:'person', class: '' },
-    { route: 'table-list', title: 'Table Reports',  icon:'content_paste', class: '' },
-    { route: 'typography', title: 'Found',  icon:'pets', class: '' },
-    { route: 'icons', title: 'Lost',  icon:'wrong_location', class: '' },
-    { route: 'new-report', title: 'Report',  icon:'notification_add', class: '' },
-];
-
-  fillerContent = Array.from({length: 50}, () =>
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
+    { route: 'users', title: 'Users',  icon:'person', class: '' },
+    { route: 'mantenimientos', title: 'Mantenimientos',  icon:'build', class: '' },
+    { route: 'tickets', title: 'Tickets',  icon:'receipt', class: '' }
+  ];
 
   private _mobileQueryListener: () => void;
 
