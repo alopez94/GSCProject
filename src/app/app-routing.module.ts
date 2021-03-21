@@ -19,7 +19,7 @@ const routes: Routes = [
       },
       {
         path: 'tickets',
-        loadChildren: () => import('./tickets/tickets.component').then(m => m.TicketsComponent)
+        loadChildren: () => import('./tickets/tickets.module').then(m => m.TicketsModule)
       }
     ]
   },

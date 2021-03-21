@@ -1,1 +1,46 @@
-<p>create works!</p>
+<div class="container">
+    <mat-card>
+        <div >
+            <mat-card-title>Nuevo Ticket</mat-card-title>
+            Ticket # 13
+            <mat-card-subtitle>Ingrese Detalles para poder continuar</mat-card-subtitle>
+        </div>
+        <form>
+            <div fxLayout="row" fxLayoutAlign="space-between stretch">
+                <mat-form-field fxFlex="49" appearance="outline">
+                    <mat-label>User Name</mat-label>
+                    <mat-select>
+                        <mat-option value="one">User 1</mat-option>
+                        <mat-option value="two">User 2</mat-option>
+                        <mat-option value="two">User 3</mat-option>
+                        <mat-option value="two">User 4</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="49" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" placeholder="Placeholder">
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-between stretch" >
+                <mat-form-field fxFlex="32" appearance="outline">
+                    <mat-label>Descripcion</mat-label>
+                    <textarea matInput placeholder="Descripcion de su problema"></textarea>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="32" appearance="outline">
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="dp3" disabled>
+                    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field fxFlex="32" appearance="outline">
+                    <mat-label>Category</mat-label>
+                    <input matInput formControlName="category" placeholder="Placeholder">
+                </mat-form-field>
+            </div>
+        </form>
+    </mat-card>
+</div>
+    

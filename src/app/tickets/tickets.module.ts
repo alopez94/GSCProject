@@ -15,24 +15,30 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table'  
-import {MatCardModule} from '@angular/material/card';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
+
 
 
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 
 
 @NgModule({
-  declarations: [CreateComponent, ListComponent, TicketsComponent],
+  declarations: [TicketsComponent, CreateComponent, ListComponent],
   imports: [
     CommonModule,
     TicketsRoutingModule,
     FlexLayoutModule,
+    
 
      // Material
      MatButtonModule,
@@ -45,8 +51,12 @@ import { LayoutModule } from '@angular/cdk/layout';
      MatGridListModule,
      MatMenuModule,
      LayoutModule,
-     MatTableModule
-
+     MatTableModule,
+     MatSelectModule,
+     MatDatepickerModule,
+     MatNativeDateModule,
+     
+     
     
   ]
 })
