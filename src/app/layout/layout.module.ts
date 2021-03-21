@@ -11,9 +11,12 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatButtonModule} from '@angular/material/button';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { RouterModule } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 
@@ -33,7 +36,13 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule,
     MatIconModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatFormFieldModule,
+
+    FlexLayoutModule,
+    
   ]
 })
 export class LayoutModule { }
