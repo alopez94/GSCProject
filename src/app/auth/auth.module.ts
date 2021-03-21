@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Route, RouterModule } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
+
 
 // Material
 
@@ -19,15 +19,13 @@ const routes: Route[] = [
       redirectTo: 'login',
       pathMatch: 'full'
   },
-  {
-      path: 'login',
-      component: LoginComponent
-  }
+  
+     
 ];
 
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [],
   imports: [
     CommonModule,
     FlexLayoutModule,
