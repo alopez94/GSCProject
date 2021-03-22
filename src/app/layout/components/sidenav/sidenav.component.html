@@ -16,10 +16,6 @@
                 <mat-icon>account_circle</mat-icon>
                 <span>Mi Perfil</span>
             </a>
-            <button mat-menu-item class="">
-                <mat-icon>mail</mat-icon>
-                <span>Bandeja de Entrada</span>
-            </button>
             <button mat-menu-item (click)="auth.logout()" class="">
                 <mat-icon>exit_to_app</mat-icon>
                 <span>Cerrar Sesión</span>
@@ -29,7 +25,7 @@
     </mat-toolbar>
 
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
-        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+        <mat-sidenav #snav [(opened)]="opened" [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
             fixedTopGap="56" class="icon-list">
             <mat-nav-list>
                 <a class="decora" mat-list-item *ngFor="let nav of fillerNav" [routerLink]="nav.route">
