@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 import { User } from '../../models/user';
 import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./usuarios.component.scss']
 })
 
-export class UsuariosComponent implements OnInit {
+export class UsuariosComponent implements OnInit, AfterViewInit {
 
   users: User[];
-  displayedColumns: string[] = ['position', 'user', 'area', 'problem'];
-  dataSource: MatTableDataSource<User>;
+  displayedColumns: string[] = ['position', 'user', 'area', 'problem', 'actions'];
+  dataSource: MatTableDataSource<User> = new MatTableDataSource;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -29,13 +29,17 @@ export class UsuariosComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
-  getUsers(){
+  details(id: string) {
+    this._router.navigate(['/users/edit', id]);
+  }
+
+  getUsers() {
     this._usersService.getUsers()
       .subscribe(
         res => {
@@ -58,7 +62,7 @@ export class UsuariosComponent implements OnInit {
     }
   }
 
-  newUser(){
+  newUser() {
     this._router.navigate(['/users/new/']);
   }
 

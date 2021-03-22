@@ -10,6 +10,7 @@ import { MatSortModule } from "@angular/material/sort";
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { UsuariosRoutingModule } from './usuarios-routing.module';
 import { CategoriasComponent } from './components/categorias/categorias.component';
@@ -17,6 +18,7 @@ import { UsuariosComponent } from './components/usuarios/usuarios.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { UsuariosFormComponent } from './components/usuarios-form/usuarios-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MatMenuModule } from '@angular/material/menu';
 @NgModule({
   declarations: [CategoriasComponent, UsuariosComponent, UsuariosFormComponent],
   imports: [
@@ -31,6 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatIconModule,
     MatTableModule,
+    MatSnackBarModule,
+    MatMenuModule,
     
     ReactiveFormsModule,
     FlexLayoutModule,
