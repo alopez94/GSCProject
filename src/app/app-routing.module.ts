@@ -36,6 +36,10 @@ const routes: Routes = [
         loadChildren: () => import('./usuarios/usuarios.module').then(m => m.UsuariosModule)
       },
       {
+        path: 'tickets',
+        loadChildren: () => import('./tickets/tickets.module').then(m => m.TicketsModule)
+      },
+      {
         path: '**',
         redirectTo: 'dashboard'
       }

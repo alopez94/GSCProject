@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { TicketsRoutingModule } from './tickets-routing.module';
+import { CreateComponent } from './components/create/create.component';
+import { ListComponent } from './components/list/list.component';
+import { TicketsComponent } from './tickets.component';
 
 //Material
 
@@ -17,19 +19,26 @@ import {MatCardModule} from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table'  
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatSelectModule } from '@angular/material/select';
+import { MatNativeDateModule } from '@angular/material/core';
+
+
 
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [TicketsComponent, CreateComponent, ListComponent],
   imports: [
     CommonModule,
-    DashboardRoutingModule,
+    TicketsRoutingModule,
     FlexLayoutModule,
+    
 
      // Material
      MatButtonModule,
@@ -42,9 +51,13 @@ import { LayoutModule } from '@angular/cdk/layout';
      MatGridListModule,
      MatMenuModule,
      LayoutModule,
-     MatTableModule
+     MatTableModule,
+     MatSelectModule,
+     MatDatepickerModule,
+     MatNativeDateModule,
      
      
+    
   ]
 })
-export class DashboardModule { }
+export class TicketsModule { }
