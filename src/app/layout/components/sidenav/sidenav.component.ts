@@ -1,5 +1,5 @@
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/core/shared/services/auth.service';
 
 @Component({
@@ -7,9 +7,11 @@ import { AuthService } from 'src/app/core/shared/services/auth.service';
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })
-export class SidenavComponent implements OnDestroy {
+export class SidenavComponent implements OnInit, OnDestroy {
 
   mobileQuery: MediaQueryList;
+
+  opened: boolean;
 
   fillerNav = [
     { route: 'dashboard', title: 'Home',  icon: 'home', class: '' },
@@ -20,10 +22,18 @@ export class SidenavComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, public auth: AuthService) {
+  constructor(
+    changeDetectorRef: ChangeDetectorRef, 
+    media: MediaMatcher, 
+    public auth: AuthService
+  ) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
+  }
+
+  ngOnInit(){
+    this.opened = true;
   }
 
   ngOnDestroy(): void {
