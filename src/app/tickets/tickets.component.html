@@ -1,49 +1,51 @@
 <div class="grid-container">
-    <h1 class="mat-h1">Dashboard</h1>
-    <mat-grid-list cols="2" rowHeight="350px">
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-card class="dashboard-card">
-              <mat-card-header>
-                <mat-card-title>
-                 Crear Ticket
-                                   
-                </mat-card-title>
-              </mat-card-header>
-              <mat-card-content class="dashboard-card-content">
-                <div class="mat-h2"> 
-                Aqui podras crear los tickets de forma manual sin utilizar el bot :)  
-                </div>
-              </mat-card-content>
-              <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
-                <button mat-raised-button color="primary" routerLink="crear">
-                    Ingresar
-                </button>
-                <!-- <button mat-button>SHARE</button> -->
-            </mat-card-actions>
-            </mat-card>
-          </mat-grid-tile>
+  
+  <mat-card>
 
-          <mat-grid-tile [colspan]="1" [rowspan]="1">
-            <mat-card class="dashboard-card">
-              <mat-card-header>
-                <mat-card-title>
-                 Listar Tickets
-                                  
-                </mat-card-title>
-              </mat-card-header>
-              <mat-card-content class="dashboard-card-content">
-                <div class="mat-h2">
-                  Aqui podras enlistar los tickets de forma manual sin utilizar el bot :)  
-                
-                  </div>
-              </mat-card-content>
-              <mat-card-actions fxLayout="row" fxLayoutAlign="end center">
-                <button mat-raised-button color="primary" routerLink="lista">
-                    Ingresar
-                </button>
-                <!-- <button mat-button>SHARE</button> -->
+      <mat-card-header  >
+        <mat-card-title >Tickets Creations</mat-card-title>
+        <mat-card-subtitle>Tasks Tickets View</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-grid-list cols="2" rowHeight="350px" fxLayout="row" fxLayoutAlign="space-around stretch">
+  
+        <mat-card class="dashboard-card mat-elevation-z2" fxFlex="50" >
+  
+          <mat-card-header  >
+              <mat-card-title >Crear Ticket</mat-card-title>
+          </mat-card-header>
+  
+            <mat-card-content  >
+              <div class="mat-h2"> 
+                Aqui podras crear los tickets de forma manual sin utilizar el bot :)  
+              </div>
+            </mat-card-content>
+  
+            <mat-card-actions fxLayout="column" >
+                <button mat-raised-button class="colorin">Ingresar</button>
             </mat-card-actions>
-            </mat-card>
-        </mat-grid-tile>
-    </mat-grid-list>
+  
+        </mat-card>
+  
+        <mat-card class="dashboard-card mat-elevation-z2 " fxFlex="50">
+          
+          <mat-card-header  >
+              <mat-card-title >Listar Ticket</mat-card-title>
+          </mat-card-header>
+  
+            <mat-card-content  >
+              <div class="mat-h2"> 
+                Aqui podras enlistar los tickets de forma manual sin utilizar el bot :) 
+              </div>
+            </mat-card-content>
+  
+            <mat-card-actions fxLayout="column" >
+                <button mat-raised-button class="colorin">Ingresar</button>
+            </mat-card-actions>
+  
+        </mat-card>
+  
+      </mat-grid-list>
+
+    </mat-card>
 </div>
