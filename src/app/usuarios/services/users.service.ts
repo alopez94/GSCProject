@@ -27,4 +27,8 @@ export class UsersService {
     return this.http.post<User>(this.baseURL + this.apiURL, user);
   }
 
+  putUser(user: User){
+    return this.http.put<User>(this.baseURL + this.apiURL, user);
+  }
+
 }
