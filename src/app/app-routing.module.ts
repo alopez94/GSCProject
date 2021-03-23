@@ -9,13 +9,13 @@ import { LoginLayoutComponent } from './layout/components/login-layout/login-lay
 const routes: Routes = [
   {
     path: '', 
-    redirectTo: 'auth',
+    redirectTo: 'chat',
     pathMatch: 'full'
   },
   {
     path: 'auth',
     component: LoginLayoutComponent,
-    canActivate: [LoginGuard],
+    // canActivate: [LoginGuard],
     children: [
       {
         path: '',
@@ -24,7 +24,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '',
+    path: 'db',
     component: ContentLayoutComponent,
     // canActivate: [AuthGuard],
     children: [
@@ -51,8 +51,9 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'chat/:id',
-    component: ChatComponent
+    path: 'chat',
+    component: ChatComponent,
+    pathMatch: 'full'
   },
   {
     path: '**',
